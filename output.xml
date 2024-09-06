@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.5 on win32)" generated="2024-09-06T14:38:37.371578" rpa="false" schemaversion="5">
+<suite id="s1" name="FetchIP" source="C:\Users\ajith\PycharmProjects\pythonProject\Automation\FetchIP.robot">
+<test id="s1-t1" name=" Get IP Address" line="6">
+<kw name="Run" owner="OperatingSystem">
+<msg time="2024-09-06T14:38:37.434470" level="INFO">Running command 'ipconfig 2&gt;&amp;1'.</msg>
+<msg time="2024-09-06T14:38:37.465772" level="INFO">${output} = 
+Windows IP Configuration
+
+
+Ethernet adapter Ethernet:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : 
+
+Wireless LAN adapter Local Area Connection* 4...</msg>
+<var>${output}</var>
+<arg>ipconfig</arg>
+<doc>Runs the given command in the system and returns the output.</doc>
+<status status="PASS" start="2024-09-06T14:38:37.423958" elapsed="0.041814"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-06T14:38:37.465772" level="INFO">
+Windows IP Configuration
+
+
+Ethernet adapter Ethernet:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : 
+
+Wireless LAN adapter Local Area Connection* 4:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : 
+
+Wireless LAN adapter WiFi:
+
+   Connection-specific DNS Suffix  . : 
+   IPv6 Address. . . . . . . . . . . : 2406:7400:104:8d9a:cd07:a61e:3ec2:b67d
+   Temporary IPv6 Address. . . . . . : 2406:7400:104:8d9a:9dca:13d1:d837:8c50
+   Link-local IPv6 Address . . . . . : fe80::8cfa:7a81:e72d:a912%17
+   IPv4 Address. . . . . . . . . . . : 192.168.0.104
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : fe80::5ee9:31ff:feb4:808d%17
+                                       192.168.0.1
+
+Ethernet adapter Bluetooth Network Connection:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : </msg>
+<arg>${output}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-06T14:38:37.465772" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-09-06T14:38:37.423958" elapsed="0.057490"/>
+</test>
+<status status="PASS" start="2024-09-06T14:38:37.371578" elapsed="0.109870"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="FetchIP">FetchIP</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
